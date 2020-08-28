@@ -1,0 +1,5 @@
+{
+  "user_mail_credentials": { "gmail_user" : "dodowatcher@gmail.com", "gmail_password" : "xxxxxx" },
+  "recipients" : ["", "dogusural@gmail.com"],
+  "alarm_price" : 60
+}
