@@ -31,23 +31,34 @@ class scheduler():
         'Recipient addresses of the alarm :\n' )
         for  address in (recipients):
             print(bullet_point + address)
-        print('\n')
+        print('\n ')
     def animation(self):
         bar = [
-        " [=     ]",
-        " [ =    ]",
-        " [  =   ]",
-        " [   =  ]",
-        " [    = ]",
-        " [     =]",
-        " [    = ]",
-        " [   =  ]",
-        " [  =   ]",
-        " [ =    ]",
+        " [*          ]",
+        " [ *         ]",
+        " [  *        ]",
+        " [   *       ]",
+        " [    *      ]",
+        " [     *     ]",
+        " [      *    ]",
+        " [       *   ]",
+        " [        *  ]",
+        " [         * ]",
+        " [          *]",
+        " [         * ]",
+        " [        *  ]",
+        " [       *   ]",
+        " [      *    ]",
+        " [     *     ]",
+        " [    *      ]",
+        " [   *       ]",
+        " [  *        ]",
+        " [ *         ]",
+        " [*          ]",
         ]
         i = 0
 
         while True:
             print(bar[i % len(bar)], end="\r")
-            time.sleep(.5)
+            time.sleep(.2)
             i += 1
