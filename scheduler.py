@@ -1,5 +1,6 @@
 
 from apscheduler.schedulers.background import BackgroundScheduler
+import time
 from config import system_config
 from gas_station import gas_station
 from mail import mail_service
@@ -29,4 +30,23 @@ class scheduler():
         'Recipient addresses of the alarm :\n' )
         for  address in (recipients):
             print(bullet_point + address)
-    
+        print('\n')
+    def animation(self):
+        bar = [
+        " [=     ]",
+        " [ =    ]",
+        " [  =   ]",
+        " [   =  ]",
+        " [    = ]",
+        " [     =]",
+        " [    = ]",
+        " [   =  ]",
+        " [  =   ]",
+        " [ =    ]",
+        ]
+        i = 0
+
+        while True:
+            print(bar[i % len(bar)], end="\r")
+            time.sleep(.5)
+            i += 1

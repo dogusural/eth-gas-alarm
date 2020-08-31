@@ -3,9 +3,9 @@ from scheduler import scheduler
 
 def main():
 
-    price_alert = scheduler(10)
+    price_alert = scheduler(5)
     while True:
-        pass
+        price_alert.animation()
 
 if __name__ == "__main__":
     main()   
