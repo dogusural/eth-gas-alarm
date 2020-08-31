@@ -26,7 +26,8 @@ class scheduler():
     def info(self,interval):
         bullet_point = '\u2022   '
         recipients = self.configuration.get_recipients()
-        print('\nThe alarm is set to query gas prices every ' + str(interval) + ' minutes.\n\n'
+        print('\nThe alarm is set to query gas prices every ' + str(interval) + ' minutes.\n\n' +
+        'Trigger price is set to ' + str(self.configuration.get_alarm_price()) + ' gwei\n\n'
         'Recipient addresses of the alarm :\n' )
         for  address in (recipients):
             print(bullet_point + address)

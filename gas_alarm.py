@@ -3,7 +3,7 @@ from scheduler import scheduler
 
 def main():
 
-    price_alert = scheduler(5)
+    price_alert = scheduler(10)
     while True:
         price_alert.animation()
 
