@@ -17,8 +17,8 @@ class scheduler():
         self.sched.shutdown()
     def gas_price_watcher(self):
         self.ethgasstation.refresh()
-        if(self.configuration.get_alarm_price() >= self.ethgasstation.get_safe_low_prices()) :
-            print("Gas price of " + str(self.ethgasstation.get_safe_low_prices()) + " has triggered the alarm price of " + str(self.configuration.get_alarm_price()) + ".")
+        if(self.configuration.get_alarm_price() >= self.ethgasstation.get_average_prices()) :
+            print("Gas price of " + str(self.ethgasstation.get_average_prices()) + " has triggered the alarm price of " + str(self.configuration.get_alarm_price()) + ".")
             self.gmail.send(self.ethgasstation)
     def start_scheduler(self,interval):
         self.sched.add_job(self.gas_price_watcher, 'interval', minutes = interval)
