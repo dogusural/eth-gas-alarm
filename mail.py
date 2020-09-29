@@ -17,7 +17,7 @@ class mail_service():
         sent_from = self.gmail_user
         to = self.recipients
         subject = mail_subject
-        body = 'Ethereum Network Gas Prices : ' + '\nFastest : ' + str(gasstation.get_fastest_prices()) +  '\nFas : ' + str(gasstation.get_fast_prices()) + '\nAverage : ' + str(gasstation.get_average_prices()) + '\nSafe Low : ' + str(gasstation.get_safe_low_prices()) 
+        body = 'Ethereum Network Gas Prices : ' + '\nFastest : ' + str(gasstation.get_fastest_prices()) +  '\nFast : ' + str(gasstation.get_fast_prices()) + '\nAverage : ' + str(gasstation.get_average_prices()) + '\nSafe Low : ' + str(gasstation.get_safe_low_prices()) 
 
 
         email_text = "From: %s\nTo: %s\nSubject: %s\n\n%s" % (sent_from,", ".join(to), subject, body)
