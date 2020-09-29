@@ -34,3 +34,10 @@ run the script with :
 pipenv run python gas_alarm.py
 
 ```
+
+if you want to keep it working on the backgound, run the script with :
+
+```
+nohup pipenv run python gas_alarm.py &
+
+```
